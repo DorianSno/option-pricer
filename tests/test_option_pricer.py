@@ -2,7 +2,7 @@ import math
 import numpy as np
 import pytest
 
-import pricer
+import option_pricer as pricer
 
 
 def norm_pdf(x: float) -> float:
