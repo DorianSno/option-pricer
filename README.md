@@ -23,16 +23,12 @@ The engine prices European call and put options using risk-neutral Monte Carlo s
 - Greek estimation prioritizes stability over raw speed.
 - Closed-form pricing is used only for validation; the Monte Carlo engine is designed to extend to products without analytic solutions.
 
-## Potential Extensions and Use Cases
+## Potential Trading Extensions
 
-This pricing engine is intended as a foundational component rather than a standalone trading system. In a larger quantitative workflow, similar Monte Carlo engines are typically used as building blocks for:
+This pricing engine is intended as a foundational component rather than a standalone trading system. The next steps that I am currently working on are:
 
-- Pricing and risk evaluation of derivatives that lack closed-form solutions (e.g., path-dependent or exotic options)
-- Computing Greeks used for hedging and risk management within a trading or portfolio system
-- Scenario analysis and stress testing under different volatility or rate assumptions
-- Integration into a broader trading framework where pricing, risk, and execution are handled by separate components
-
-For example, in a future trading or research project, this engine will be extended to support path-dependent payoffs, calibrated model parameters, or portfolio-level aggregation, while remaining decoupled from signal generation and execution logic.
+- Compare model prices to observed market prices and trade only when discrepancies exceed statistical uncertainty.  
+- Use Monte Carlo–derived Greeks for hedging, position sizing, and risk management in a trading framework.
 
 ## Usage with Given Parameters
 
