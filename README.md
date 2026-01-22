@@ -17,22 +17,6 @@ The engine prices European call and put options using risk-neutral Monte Carlo s
 - Validation against Black–Scholes closed-form prices  
 - Command-line interface to support reproducible experiments and convergence studies
 
-## Usage with Given Parameters
-
-The pricing engine is designed to be called with explicit option and market parameters, similar to how pricing components are used inside larger quantitative systems.
-
-Example: pricing a European call option with  
-S₀ = 102, K = 100, T = 45 days, r = 3%, σ = 25%
-
-```bash
-python option_pricer.py \
-  --S0 102 \
-  --K 100 \
-  --T_days 45 \
-  --r 0.03 \
-  --sigma 0.25 \
-  --type call
-
 ## Notes
 
 - Variance reduction techniques are used to improve estimator efficiency rather than increase simulation count.
@@ -49,3 +33,19 @@ This pricing engine is intended as a foundational component rather than a standa
 - Integration into a broader trading framework where pricing, risk, and execution are handled by separate components
 
 For example, in a future trading or research project, this engine will be extended to support path-dependent payoffs, calibrated model parameters, or portfolio-level aggregation, while remaining decoupled from signal generation and execution logic.
+
+## Usage with Given Parameters
+
+The pricing engine is designed to be called with explicit option and market parameters, similar to how pricing components are used inside larger quantitative systems.
+
+Example: pricing a European call option with  
+S₀ = 102, K = 100, T = 45 days, r = 3%, σ = 25%
+
+```bash
+python option_pricer.py \
+  --S0 102 \
+  --K 100 \
+  --T_days 45 \
+  --r 0.03 \
+  --sigma 0.25 \
+  --type call
