@@ -25,7 +25,7 @@ The engine prices European call and put options using risk-neutral Monte Carlo s
 
 ## Potential Trading Extensions
 
-This pricing engine is intended as a foundational component rather than a standalone trading system. The next steps that I am currently working on are:
+This pricing engine is intended as a foundational component rather than a standalone trading system. Possible extensions include:
 
 - Compare model prices to observed market prices and trade only when discrepancies exceed statistical uncertainty.  
 - Use Monte Carlo–derived Greeks for hedging, position sizing, and risk management in a trading framework.
